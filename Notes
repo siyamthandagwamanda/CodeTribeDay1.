@@ -1,0 +1,566 @@
+React isn't magic.
+
+It's just JavaScript that returns HTML.
+
+Example
+
+function Header() {
+    return (
+        <h1>Links Vault</h1>
+    );
+}
+
+Nothing special.
+
+Just a function.
+
+Rule #2
+Everything starts with data.
+
+Never think
+
+"I need a form."
+
+Think
+
+"What data am I storing?"
+
+For this project:
+
+Link
+
+↓
+
+Title
+
+URL
+
+Description
+
+Tags
+
+Immediately imagine
+
+interface Link{
+    id:number;
+    title:string;
+    url:string;
+    description:string;
+    tags:string[];
+}
+
+If you can't define the data...
+
+You can't build the application.
+
+Always define data FIRST.
+
+Rule #3
+
+Think in nouns.
+
+If I say
+
+Spotify
+
+You immediately think
+
+Song
+
+Album
+
+Playlist
+
+Artist
+
+User
+
+Those become interfaces.
+
+If I say
+
+Bank
+
+Customer
+
+Account
+
+Transaction
+
+If I say
+
+School
+
+Student
+
+Teacher
+
+Subject
+
+Mark
+
+If I say
+
+Links Vault
+
+Link
+
+One noun.
+
+One interface.
+
+Rule #4
+
+Everything in React is either
+
+DATA
+
+or
+
+UI
+
+Nothing else.
+
+Data
+
+↓
+
+Links
+
+UI
+
+↓
+
+Cards
+
+Buttons
+
+Forms
+
+Search
+
+Never mix them in your head.
+
+Rule #5
+
+Always ask
+
+"Who owns the data?"
+
+This is the biggest beginner mistake.
+
+Example
+
+LinkCard
+
+Should LinkCard store all links?
+
+No.
+
+Why?
+
+It only displays ONE.
+
+Who owns the array?
+
+App.tsx
+
+Always.
+
+Think
+
+App
+
+↓
+
+owns everything
+
+↓
+
+Children borrow it
+Rule #6
+
+State is memory.
+
+Imagine React has amnesia.
+
+Every render it forgets everything.
+
+State says
+
+"Remember this."
+
+Without state
+
+Click Add
+
+↓
+
+Reload
+
+↓
+
+Gone
+
+State
+
+Click Add
+
+↓
+
+Remember
+
+↓
+
+Display
+Rule #7
+
+Props are gifts.
+
+Parent
+
+↓
+
+gives
+
+↓
+
+Child
+
+Child never steals.
+
+Child never edits.
+
+Child simply uses.
+
+Rule #8
+
+Every button answers ONE question.
+
+Delete button?
+
+Question
+
+Which link?
+
+Needs
+
+id
+
+Edit?
+
+Question
+
+Which link?
+
+Needs
+
+id
+
+Search?
+
+Question
+
+What text?
+
+Needs
+
+search
+
+Always ask
+
+"What information does this button need?"
+
+Rule #9
+
+Every application follows
+
+INPUT
+
+↓
+
+STATE
+
+↓
+
+OUTPUT
+
+For Links Vault
+
+Input
+
+↓
+
+Form
+
+↓
+
+State
+
+↓
+
+Links Array
+
+↓
+
+Output
+
+↓
+
+Cards
+
+That's React.
+
+Rule #10
+
+Master Arrays.
+
+React lives inside arrays.
+
+You should know these by heart.
+
+map()
+
+Think
+
+Every item
+
+↓
+
+Do something
+Apple
+
+Banana
+
+Orange
+
+↓
+
+🍎
+
+🍌
+
+🍊
+
+React
+
+Links
+
+↓
+
+Cards
+filter()
+
+Think
+
+Keep only matches
+Google
+
+Facebook
+
+GitHub
+
+Search
+
+git
+
+↓
+
+GitHub
+find()
+
+Think
+
+First match
+
+Used for
+
+Edit
+
+findIndex()
+
+Think
+
+Where is it?
+
+Returns
+
+0
+
+1
+
+2
+
+3
+some()
+
+Think
+
+Does ANY match?
+
+Returns
+
+true
+
+false
+every()
+
+Think
+
+Do ALL match?
+
+Returns
+
+true
+
+false
+Rule #11
+
+Local Storage is just a cupboard.
+
+React
+
+↓
+
+puts data
+
+↓
+
+Cupboard
+
+↓
+
+Close browser
+
+↓
+
+Open browser
+
+↓
+
+Take data back
+
+That's it.
+
+Rule #12
+
+JSON is a translator.
+
+React understands
+
+Objects
+
+Local Storage understands
+
+Strings
+
+JSON translates.
+
+Object
+
+↓
+
+JSON.stringify()
+
+↓
+
+String
+
+Back
+
+String
+
+↓
+
+JSON.parse()
+
+↓
+
+Object
+Rule #13
+
+Every React app asks four questions.
+
+What data?
+
+↓
+
+Interface
+
+Where is the data?
+
+↓
+
+State
+
+Who owns it?
+
+↓
+
+Parent
+
+Who displays it?
+
+↓
+
+Child
+
+If you answer those...
+
+You can build almost anything.
+
+Rule #14
+
+Components are LEGO bricks.
+
+Don't build
+
+Huge App
+
+Build
+
+Header
+
+↓
+
+Search
+
+↓
+
+Form
+
+↓
+
+Card
+
+↓
+
+Footer
+
+Small pieces.
+
+Rule #15
+
+The Golden Rule
+
+Never ask
+
+"How do I build this app?"
+
+Instead ask
+
+What data?
+
+↓
+
+Who owns it?
+
+↓
+
+Who displays it?
+
+↓
+
+How does it change?
+
+That's React thinking.
